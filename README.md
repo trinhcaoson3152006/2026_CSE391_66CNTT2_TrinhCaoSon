@@ -1,2 +1,1 @@
-# 2026_CSE391_66CNTT2_TrinhCaoSon
-CSE391 - Thực hành Web
+Em là Trịnh Cao Sơn -2451060716- 66CNTT2 - 
