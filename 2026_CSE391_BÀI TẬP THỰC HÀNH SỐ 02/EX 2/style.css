@@ -1,0 +1,122 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Quicksand",sans-serif;
+}
+
+body{
+background:black;
+}
+
+header{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+}
+
+.logo a{
+font-family:"Oleo Script",cursive;
+font-size:36px;
+color:yellow;
+text-decoration:none;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+color:yellow;
+text-decoration:none;
+font-weight:500;
+}
+
+.hero{
+height:600px;
+background-image:url("images/ocean.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.hero-box{
+background:rgba(0,0,0,0.7);
+color:white;
+padding:40px;
+border-radius:6px;
+text-align:center;
+box-shadow:0 4px 15px rgba(0,0,0,0.4);
+}
+
+.hero-box h1{
+font-family:"Raleway",sans-serif;
+margin-bottom:10px;
+}
+
+.hero-box p{
+margin-bottom:10px;
+}
+
+.hero-box a{
+display:inline-block;
+background:yellow;
+color:black;
+padding:6px 16px;
+text-decoration:none;
+font-weight:bold;
+border-radius:3px;
+}
+
+.highlights{
+background:rgb(201,246,246);
+padding:30px;
+text-align:center;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:20px;
+}
+
+.card img{
+width:260px;
+height:120px;
+object-fit:cover;
+border-radius:5px;
+}
+
+.card p{
+margin-top:8px;
+}
+
+.card strong{
+color:rgb(40,224,153);
+}
+
+footer{
+background:black;
+padding:20px;
+}
+
+.social{
+display:flex;
+justify-content:center;
+gap:50px;
+}
+
+.social img{
+width:40px;
+height:40px;
+}
