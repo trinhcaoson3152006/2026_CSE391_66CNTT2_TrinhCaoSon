@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bảng điểm sinh viên</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:40px;
+}
+
+input{
+padding:6px;
+margin-right:10px;
+}
+
+button{
+padding:6px 10px;
+}
+
+table{
+border-collapse:collapse;
+width:100%;
+margin-top:20px;
+}
+
+th,td{
+border:1px solid #ccc;
+padding:8px;
+text-align:center;
+}
+
+.low{
+background:yellow;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<input id="name" placeholder="Họ tên">
+<input id="score" type="number" placeholder="Điểm 0-10">
+<button id="addBtn">Thêm</button>
+
+<table>
+
+<thead>
+<tr>
+<th>STT</th>
+<th>Họ tên</th>
+<th>Điểm</th>
+<th>Xếp loại</th>
+<th>Thao tác</th>
+</tr>
+</thead>
+
+<tbody id="tbody"></tbody>
+
+</table>
+
+<p>
+Tổng SV: <span id="total">0</span> |
+Điểm TB: <span id="avg">0</span>
+</p>
+
+<script src="script.js"></script>
+
+</body>
+</html>
