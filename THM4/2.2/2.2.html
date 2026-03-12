@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form đặt hàng</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:40px;
+max-width:500px;
+}
+
+input,select,textarea{
+width:100%;
+padding:8px;
+margin-top:5px;
+margin-bottom:5px;
+}
+
+textarea{
+height:80px;
+}
+
+.error{
+color:red;
+font-size:14px;
+display:none;
+}
+
+.invalid{
+border:2px solid red;
+}
+
+.valid{
+border:2px solid green;
+}
+
+.counter{
+font-size:13px;
+text-align:right;
+}
+
+#confirmBox{
+border:1px solid #ccc;
+padding:15px;
+margin-top:20px;
+display:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<form id="orderForm">
+
+<label>Tên sản phẩm</label>
+<select id="product">
+<option value="">-- Chọn sản phẩm --</option>
+<option value="Áo">Áo</option>
+<option value="Quần">Quần</option>
+<option value="Giày">Giày</option>
+</select>
+<span class="error" id="productError"></span>
+
+<label>Số lượng</label>
+<input type="number" id="quantity">
+<span class="error" id="quantityError"></span>
+
+<label>Ngày giao hàng</label>
+<input type="date" id="date">
+<span class="error" id="dateError"></span>
+
+<label>Địa chỉ giao</label>
+<input id="address">
+<span class="error" id="addressError"></span>
+
+<label>Ghi chú</label>
+<textarea id="note"></textarea>
+<div class="counter"><span id="count">0</span>/200</div>
+<span class="error" id="noteError"></span>
+
+<p>Thanh toán</p>
+
+<label><input type="radio" name="payment" value="COD"> COD</label>
+<label><input type="radio" name="payment" value="Chuyển khoản"> Chuyển khoản</label>
+<label><input type="radio" name="payment" value="Ví điện tử"> Ví điện tử</label>
+
+<span class="error" id="paymentError"></span>
+
+<br><br>
+
+<p>Tổng tiền: <b id="total">0</b> VNĐ</p>
+
+<button type="submit">Đặt hàng</button>
+
+</form>
+
+<div id="confirmBox">
+
+<h3>Xác nhận đơn hàng</h3>
+
+<p id="summary"></p>
+
+<button id="confirmBtn">Xác nhận</button>
+<button id="cancelBtn">Hủy</button>
+
+</div>
+
+<div id="success"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
