@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Multi Step Form</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:40px;
+max-width:500px;
+}
+
+.step{
+display:none;
+}
+
+.step.active{
+display:block;
+}
+
+input{
+width:100%;
+padding:8px;
+margin-top:5px;
+margin-bottom:10px;
+}
+
+.error{
+color:red;
+font-size:14px;
+display:none;
+}
+
+.invalid{
+border:2px solid red;
+}
+
+.valid{
+border:2px solid green;
+}
+
+.progress{
+height:10px;
+background:#ddd;
+margin-bottom:20px;
+}
+
+.progress-bar{
+height:10px;
+width:0%;
+background:green;
+}
+
+.buttons{
+margin-top:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h3 id="stepText">Bước 1 / 3</h3>
+
+<div class="progress">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+
+<form id="form">
+
+<!-- STEP 1 -->
+
+<div class="step active" id="step1">
+
+<label>Họ tên</label>
+<input id="fullname">
+<span class="error" id="fullnameError"></span>
+
+<label>Ngày sinh</label>
+<input type="date" id="birth">
+<span class="error" id="birthError"></span>
+
+<p>Giới tính</p>
+
+<label><input type="radio" name="gender" value="Nam"> Nam</label>
+<label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+
+<span class="error" id="genderError"></span>
+
+</div>
+
+<!-- STEP 2 -->
+
+<div class="step" id="step2">
+
+<label>Email</label>
+<input id="email">
+<span class="error" id="emailError"></span>
+
+<label>Mật khẩu</label>
+<input type="password" id="password">
+<span class="error" id="passwordError"></span>
+
+<label>Xác nhận mật khẩu</label>
+<input type="password" id="confirm">
+<span class="error" id="confirmError"></span>
+
+</div>
+
+<!-- STEP 3 -->
+
+<div class="step" id="step3">
+
+<h3>Xác nhận thông tin</h3>
+
+<p id="summary"></p>
+
+</div>
+
+<div class="buttons">
+
+<button type="button" id="prevBtn">Quay lại</button>
+<button type="button" id="nextBtn">Tiếp theo</button>
+
+</div>
+
+</form>
+
+<div id="success"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
