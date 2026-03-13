@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
 
+<head>
+<meta charset="UTF-8">
+<title>Async Await + Fetch API 2</title>
+
+<style>
+body{
+font-family:Arial;
+}
+
+#posts{
+margin-top:20px;
+}
+
+.post{
+border:1px solid #ccc;
+padding:10px;
+margin:10px 0;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Danh sách bài viết</h2>
+
+<button id="loadBtn">Tải bài viết</button>
+
+<div id="posts"></div>
+
+<script>
+
+async function loadPosts(){
+
+let container = document.getElementById("posts")
+
+try{
+
+let response = await fetch("https://jsonplaceholder.typicode.com/posts")
+
+if(!response.ok){
+throw new Error("Không thể kết nối API")
+}
+
+let posts = await response.json()
+
+console.log(posts)
+
+container.innerHTML = ""
+
+posts.slice(0,5).forEach(post=>{
+
+let div = document.createElement("div")
+
+div.classList.add("post")
+
+div.innerHTML = `
+<h3>${post.title}</h3>
+<p>${post.body}</p>
+`
+
+container.appendChild(div)
+
+})
+
+}
+
+catch(error){
+
+console.error("Có lỗi:",error)
+
+container.innerHTML = "<p>Không tải được dữ liệu</p>"
+
+}
+
+}
+
+document.getElementById("loadBtn").addEventListener("click",loadPosts)
+
+</script>
+
+</body>
+
+</html>
