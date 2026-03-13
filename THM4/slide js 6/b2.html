@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Modifying Elements</title>
+</head>
+
+<body>
+
+<h1 id="title">Tiêu đề ban đầu</h1>
+
+<div id="content"></div>
+
+<ul id="list">
+<li>Phần tử 1</li>
+<li id="removeItem">Phần tử 2</li>
+</ul>
+
+<script>
+
+let title = document.getElementById("title")
+title.textContent = "Tiêu đề đã được thay đổi"
+
+let content = document.getElementById("content")
+content.innerHTML = "<p>Đây là nội dung được chèn bằng innerHTML</p>"
+
+let li = document.createElement("li")
+li.textContent = "Phần tử mới"
+
+let list = document.getElementById("list")
+list.append(li)
+
+let removeItem = document.getElementById("removeItem")
+removeItem.remove()
+
+</script>
+
+</body>
+</html>
