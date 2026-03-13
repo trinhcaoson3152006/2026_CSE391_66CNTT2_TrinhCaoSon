@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+<meta charset="UTF-8">
+<title>Sự kiện</title>
+
+<style>
+#benNgoai{
+padding:20px;
+background:lightcoral;
+}
+
+#benTrong{
+padding:20px;
+background:lightyellow;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Demo sự kiện</h2>
+
+<button id="nut">Bấm vào</button>
+
+<br><br>
+
+<input type="text" id="oNhap" placeholder="Nhấn phím bất kỳ">
+
+<br><br>
+
+<form id="formDemo">
+<input type="text" placeholder="Nhập email">
+<button type="submit">Gửi</button>
+</form>
+
+<br><br>
+
+<div id="benNgoai">
+Bên ngoài
+<div id="benTrong">Bên trong</div>
+</div>
+
+<br><br>
+
+<ul id="danhSach">
+<li>Táo</li>
+<li>Chuối</li>
+<li>Cam</li>
+</ul>
+
+<script>
+
+let nut = document.getElementById("nut")
+
+nut.addEventListener("click", function(){
+alert("Bạn vừa bấm nút")
+})
+
+
+let oNhap = document.getElementById("oNhap")
+
+oNhap.addEventListener("keyup", function(e){
+console.log("Phím vừa nhấn:", e.key)
+})
+
+
+let formDemo = document.getElementById("formDemo")
+
+formDemo.addEventListener("submit", function(e){
+e.preventDefault()
+alert("Form đã gửi nhưng trang không reload")
+})
+
+
+let benNgoai = document.getElementById("benNgoai")
+let benTrong = document.getElementById("benTrong")
+
+benNgoai.addEventListener("click", function(){
+console.log("Click vào bên ngoài")
+})
+
+benTrong.addEventListener("click", function(){
+console.log("Click vào bên trong")
+})
+
+
+let danhSach = document.getElementById("danhSach")
+
+danhSach.addEventListener("click", function(e){
+
+if(e.target.tagName === "LI"){
+alert("Bạn chọn: " + e.target.textContent)
+}
+
+})
+
+</script>
+
+</body>
+
+</html>
