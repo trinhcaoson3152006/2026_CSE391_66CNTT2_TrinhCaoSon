@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Selecting Elements</title>
+</head>
+
+<body>
+
+<h1 id="title">Tiêu đề trang</h1>
+
+<p class="text">Đoạn văn 1</p>
+<p class="text">Đoạn văn 2</p>
+<p class="text">Đoạn văn 3</p>
+
+<button id="btn">Click me</button>
+
+<script>
+
+let firstText = document.querySelector(".text")
+console.log(firstText)
+
+let allTexts = document.querySelectorAll(".text")
+console.log(allTexts)
+
+let title = document.getElementById("title")
+console.log(title)
+
+</script>
+
+</body>
+</html>
