@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Event Listeners</title>
+
+<style>
+.box{
+width:200px;
+height:100px;
+background:lightgray;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-top:20px;
+}
+
+.active{
+background:orange;
+}
+</style>
+
+</head>
+
+<body>
+
+<button id="btn">Click</button>
+
+<div id="box" class="box">Hello</div>
+
+<script>
+
+let btn = document.getElementById("btn")
+let box = document.getElementById("box")
+
+btn.addEventListener("click", function(){
+box.textContent = "Bạn vừa click"
+})
+
+btn.addEventListener("click", function(){
+box.classList.toggle("active")
+})
+
+box.addEventListener("mouseenter", function(){
+box.textContent = "Mouse vào"
+})
+
+box.addEventListener("mouseleave", function(){
+box.textContent = "Mouse ra"
+})
+
+</script>
+
+</body>
+</html>
