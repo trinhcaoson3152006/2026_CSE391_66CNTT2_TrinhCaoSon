@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Attributes & Classes</title>
+
+<style>
+.box{
+width:150px;
+height:150px;
+background:gray;
+margin-top:20px;
+}
+
+.active{
+background:green;
+}
+
+.highlight{
+border:3px solid red;
+}
+</style>
+
+</head>
+
+<body>
+
+<img id="image" src="https://via.placeholder.com/150">
+
+<div id="box" class="box"></div>
+
+<button id="btn">Toggle</button>
+
+<script>
+
+let img = document.getElementById("image")
+img.src = "https://via.placeholder.com/200"
+
+let box = document.getElementById("box")
+
+box.classList.add("highlight")
+box.classList.remove("highlight")
+
+document.getElementById("btn").onclick = function(){
+box.classList.toggle("active")
+
+if(box.classList.contains("active")){
+console.log("Box đang active")
+}else{
+console.log("Box không active")
+}
+
+}
+
+</script>
+
+</body>
+</html>
